@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 # 1. PAGE CONFIGURATION & SETUP
 # ==========================================
 st.set_page_config(
-    page_title="Bhopal Weather Forecaster",
+    page_title="Weather Forecaster",
     page_icon="🌤️",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -72,14 +72,14 @@ page = st.sidebar.radio("Navigate",
 )
 
 st.sidebar.markdown("---")
-st.sidebar.info("Powered by SARIMA Machine Learning\n\nOptimized for Bhopal Climate Data")
+st.sidebar.info("Powered by ARIMA Machine Learning\n\nO")
 
 # ==========================================
 # 4. PAGE 1: LIVE PREDICTION ENGINE
 # ==========================================
 if page == "Live Prediction Engine":
     st.title("Live Prediction Engine")
-    st.markdown("Enter a month and year to generate a temperature forecast for Bhopal.")
+    st.markdown("Enter a month and year to generate a temperature forecast.")
     
     if model is None:
         st.error("🚨 Critical Error: `bhopal_sarima_verified.pkl` not found in the directory. Please upload your model file.")
@@ -169,7 +169,7 @@ elif page == "Interactive Dashboard":
 # ==========================================
 elif page == "Model Report Card":
     st.title("Model Performance Report")
-    st.markdown("Evaluating the SARIMA mathematical parameters on holdout data.")
+    st.markdown("Evaluating the ARIMA mathematical parameters on holdout data.")
     
     col1, col2, col3 = st.columns(3)
     # Using the metrics we calculated earlier in the project
@@ -191,8 +191,8 @@ elif page == "Model Report Card":
 elif page == "About Project":
     st.title("About This Project")
     st.markdown("""
-    ### CSBS Weather Forecasting System
-    This application was developed as part of a Computer Science and Business Systems (CSBS) engineering project at SOIT RGPV. 
+    ### Weather Forecasting System
+    This is Weather Forecaster predictior model . 
     
     **Objective:** To demonstrate an end-to-end machine learning data pipeline, from synthetic climate modeling and data engineering (resampling) to mathematical evaluation and front-end UI deployment.
     
